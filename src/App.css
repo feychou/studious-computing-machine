@@ -1,25 +1,17 @@
-.Modal {
-  position: fixed;
-  background-color: white;
-  border: 3px solid pink;
-  padding: 30px;
-  width: 50%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 .App {
   max-width: 992px;
   margin: auto;
   padding: 50px;
+}
+
+.Backdrop {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.ModalTitle {
-  font-weight: bold;
+.Backdrop.openModal {
+  opacity: 0.33;
 }
 
 .concept {

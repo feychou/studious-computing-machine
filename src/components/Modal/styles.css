@@ -1,0 +1,18 @@
+.App .Modal {
+  position: fixed;
+  background-color: white;
+  border: 3px solid pink;
+  padding: 30px;
+  width: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.Modal button {
+  float: right;
+}
+
+.Modal .title {
+  font-weight: bold;
+}
