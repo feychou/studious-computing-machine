@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import './App.css';
 import {
   quizData,
@@ -7,6 +9,19 @@ import {
 } from './quizData';
 
 function App() {
+  const [checked, setChecked] = useState([]);
+
+
+  const onChangeChecked = (question) => {
+    const newChecked = checked.includes(question) ?
+      checked.filter(item => item !== question) :
+      [...checked, question]
+
+    setChecked(newChecked)
+  }
+
+  console.log(checked)
+
   return (
     <div className="App">
       <header>
@@ -44,6 +59,7 @@ function App() {
               id={question.id}
               name="client-side-question"
               type="checkbox"
+              onChange={() => onChangeChecked(question.id)}
             />
             <label for={question.id}>
               {question.text}
@@ -59,6 +75,7 @@ function App() {
               id={question.id}
               name="client-side-question"
               type="checkbox"
+              onChange={() => onChangeChecked(question.id)}
             />
             <label for={question.id}>
               {question.text}
@@ -75,6 +92,7 @@ function App() {
               id={question.id}
               name="client-side-question"
               type="checkbox"
+              onChange={() => onChangeChecked(question.id)}
             />
             <label for={question.id}>
               {question.text}
