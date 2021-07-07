@@ -31,10 +31,11 @@ function App() {
 
       <Header />
       {quizSections.map(type => <QuizSection type={type} onChange={onChangeChecked} />)}
-      
+      <button>My result</button>
       <div className="Modal">
         <div className="ModalTitle">Your result</div>
       </div>
+
     </div>
   );
 }
