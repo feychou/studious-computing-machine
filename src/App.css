@@ -1,4 +1,28 @@
+header {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
 .App {
-  text-align: center;
+  max-width: 992px;
+  margin: auto;
+  padding: 50px;
+}
+
+.SectionTitle {
+  margin-bottom: 10px;
+  text-decoration: underline;
+}
+
+.color {
+  font-weight: bold;
+}
+
+.concept {
+  color: #64A6BD;
+}
+
+.skill {
+  color: #DE6C83;
 }
 

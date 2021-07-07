@@ -207,7 +207,8 @@ const quizData = {
   ]
 }
 
-export quizData,{ 
+export {
+  quizData, 
   TYPE_SKILL, 
   TYPE_CONCEPT,
   CLIENT_SIDE,
