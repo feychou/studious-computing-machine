@@ -83,7 +83,7 @@ const quizData = {
     {
       id: BRANDING,
       text: 'Branding (exceptional use of fonts, colours etc.)',
-      type: TYPE_CONCEPT,
+      type: TYPE_SKILL,
       points: 5
     },
   ],
@@ -132,13 +132,13 @@ const quizData = {
     },
     {
       id: READ_DATA,
-      text: 'Data fetching (read)',
+      text: 'Data fetching (read/GET)',
       type: TYPE_SKILL,
       points: 0
     },
     {
       id: WRITE_DATA,
-      text: 'Data fetching (POST)',
+      text: 'Data fetching (write/POST)',
       type: TYPE_SKILL,
       points: 10
     },
@@ -164,13 +164,13 @@ const quizData = {
     },
     {
       id: GET_ROUTES,
-      text: 'Routes for reading (GET)',
+      text: 'Routes for reading (read/GET)',
       type: TYPE_SKILL,
       points: 20
     },
     {
       id: POST_ROUTES,
-      text: 'Routes for writing (POST)',
+      text: 'Routes for writing (write/POST)',
       type: TYPE_SKILL,
       points: 15
     },
