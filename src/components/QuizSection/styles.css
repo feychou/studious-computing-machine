@@ -1,0 +1,13 @@
+.QuizSection {
+  margin-bottom: 30px;
+}
+
+.QuizSection .title {
+  margin-bottom: 10px;
+  text-decoration: underline;
+}
+
+.QuizSection .entry {
+  display: flex;
+  align-items: center;
+}

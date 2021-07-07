@@ -1,12 +1,14 @@
 import { useState } from 'react';
 
-import './App.css';
 import {
-  quizData,
   CLIENT_SIDE,
   LAYOUTING,
   SERVER_SIDE
 } from './quizData';
+import QuizSection from './components/QuizSection';
+import './App.css';
+
+const quizSections = [ CLIENT_SIDE, LAYOUTING, SERVER_SIDE ];
 
 function App() {
   const [checked, setChecked] = useState([]);
@@ -51,56 +53,9 @@ function App() {
         </p>
 
       </header>
-      <section>
-        <div className="SectionTitle">Layout and Design</div>
-        {quizData[LAYOUTING].map(question => (
-          <div className={`${question.type.toLowerCase()} Entry`}>
-            <input
-              id={question.id}
-              name="client-side-question"
-              type="checkbox"
-              onChange={() => onChangeChecked(question.id)}
-            />
-            <label for={question.id}>
-              {question.text}
-            </label>
-          </div>
-        ))}
-      </section>
-      <section>
-        <div className="SectionTitle">Frontend</div>
-        {quizData[CLIENT_SIDE].map(question => (
-          <div className={`${question.type.toLowerCase()} Entry`}>
-            <input
-              id={question.id}
-              name="client-side-question"
-              type="checkbox"
-              onChange={() => onChangeChecked(question.id)}
-            />
-            <label for={question.id}>
-              {question.text}
-            </label>
-          </div>
 
-        ))}
-      </section>
-      <section>
-        <div className="SectionTitle">Server</div>
-        {quizData[SERVER_SIDE].map(question => (
-          <div className={`${question.type.toLowerCase()} Entry`}>
-            <input
-              id={question.id}
-              name="client-side-question"
-              type="checkbox"
-              onChange={() => onChangeChecked(question.id)}
-            />
-            <label for={question.id}>
-              {question.text}
-            </label>
-          </div>
-
-        ))}
-      </section>
+      {quizSections.map(type => <QuizSection type={type} onChange={onChangeChecked} />)}
+      
       <div className="Modal">
         <div className="ModalTitle">Your result</div>
       </div>

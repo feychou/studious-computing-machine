@@ -3,10 +3,6 @@ header {
   margin-bottom: 30px;
 }
 
-section {
-  margin-bottom: 30px;
-}
-
 .Modal {
   position: fixed;
   background-color: white;
@@ -28,18 +24,8 @@ section {
   font-weight: bold;
 }
 
-.SectionTitle {
-  margin-bottom: 10px;
-  text-decoration: underline;
-}
-
 .color {
   font-weight: bold;
-}
-
-.Entry {
-  display: flex;
-  align-items: center;
 }
 
 .concept {
