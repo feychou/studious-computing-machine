@@ -7,10 +7,25 @@ section {
   margin-bottom: 30px;
 }
 
+.Modal {
+  position: fixed;
+  background-color: white;
+  border: 3px solid pink;
+  padding: 30px;
+  width: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .App {
   max-width: 992px;
   margin: auto;
   padding: 50px;
+}
+
+.ModalTitle {
+  font-weight: bold;
 }
 
 .SectionTitle {
@@ -20,6 +35,11 @@ section {
 
 .color {
   font-weight: bold;
+}
+
+.Entry {
+  display: flex;
+  align-items: center;
 }
 
 .concept {

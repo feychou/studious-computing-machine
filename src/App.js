@@ -39,12 +39,13 @@ function App() {
       <section>
         <div className="SectionTitle">Layout and Design</div>
         {quizData[LAYOUTING].map(question => (
-          <div className={question.type.toLowerCase()}>
-            <label>
-              <input
-                name="client-side-question"
-                type="checkbox"
-              />
+          <div className={`${question.type.toLowerCase()} Entry`}>
+            <input
+              id={question.id}
+              name="client-side-question"
+              type="checkbox"
+            />
+            <label for={question.id}>
               {question.text}
             </label>
           </div>
@@ -53,12 +54,13 @@ function App() {
       <section>
         <div className="SectionTitle">Frontend</div>
         {quizData[CLIENT_SIDE].map(question => (
-          <div className={question.type.toLowerCase()}>
-            <label>
-              <input
-                name="client-side-question"
-                type="checkbox"
-              />
+          <div className={`${question.type.toLowerCase()} Entry`}>
+            <input
+              id={question.id}
+              name="client-side-question"
+              type="checkbox"
+            />
+            <label for={question.id}>
               {question.text}
             </label>
           </div>
@@ -68,18 +70,22 @@ function App() {
       <section>
         <div className="SectionTitle">Server</div>
         {quizData[SERVER_SIDE].map(question => (
-          <div className={question.type.toLowerCase()}>
-            <label>
-              <input
-                name="client-side-question"
-                type="checkbox"
-              />
+          <div className={`${question.type.toLowerCase()} Entry`}>
+            <input
+              id={question.id}
+              name="client-side-question"
+              type="checkbox"
+            />
+            <label for={question.id}>
               {question.text}
             </label>
           </div>
 
         ))}
       </section>
+      <div className="Modal">
+        <div className="ModalTitle">Your result</div>
+      </div>
     </div>
   );
 }
