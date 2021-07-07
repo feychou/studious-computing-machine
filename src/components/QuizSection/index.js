@@ -5,8 +5,6 @@ import { quizData } from '../../quizData';
 import './styles.css';
 
 function QuizSection({ type, onChange }) {
-  console.log(type)
-  console.log(quizData[type])
 
   return (
     <section className="QuizSection">
