@@ -3,9 +3,9 @@ const TYPE_CONCEPT = 'CONCEPT';
 const TYPE_SKILL = 'SKILL';
 
 // main areas
-const LAYOUTING = 'LAYOUTING';
-const CLIENT_SIDE = 'CLIENT_SIDE';
-const SERVER_SIDE = 'SERVER_SIDE';
+const LAYOUT = 'Layout and Design';
+const FRONTEND = 'Frontend';
+const BACKEND = 'Backend';
 
 // question ids
 const REP_LAYOUT = 'REP_LAYOUT_SKILL';
@@ -37,7 +37,7 @@ const UPLOADS = 'UPLOADS';
 const DEPLOYMENT = 'DEPLOYMENT';
 
 const quizData = {
-  [LAYOUTING]: [
+  [LAYOUT]: [
     {
       id: REP_LAYOUT,
       text: 'Reproducing an existing layout',
@@ -87,7 +87,7 @@ const quizData = {
       points: 5
     },
   ],
-  [CLIENT_SIDE]: [
+  [FRONTEND]: [
     {
       id: SPA,
       text: 'SPA concepts',
@@ -143,7 +143,7 @@ const quizData = {
       points: 10
     },
   ],
-  [SERVER_SIDE]: [
+  [BACKEND]: [
     {
       id: DATA_MODEL,
       text: 'Data modelling with NoSQL',
@@ -211,7 +211,7 @@ export {
   quizData, 
   TYPE_SKILL, 
   TYPE_CONCEPT,
-  CLIENT_SIDE,
-  LAYOUTING,
-  SERVER_SIDE
+  FRONTEND,
+  LAYOUT,
+  BACKEND
 };

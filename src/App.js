@@ -1,16 +1,17 @@
 import { useState } from 'react';
 
 import {
-  CLIENT_SIDE,
-  LAYOUTING,
-  SERVER_SIDE
+  FRONTEND,
+  LAYOUT,
+  BACKEND
 } from './quizData';
+
 import QuizSection from './components/QuizSection';
 import Header from './components/Header';
 
 import './App.css';
 
-const quizSections = [ CLIENT_SIDE, LAYOUTING, SERVER_SIDE ];
+const quizSections = [ LAYOUT, FRONTEND, BACKEND ];
 
 function App() {
   const [checked, setChecked] = useState([]);

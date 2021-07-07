@@ -8,7 +8,7 @@ function QuizSection({ type, onChange }) {
 
   return (
     <section className="QuizSection">
-      <div className="title">Layout and Design</div>
+      <div className="title">{type}</div>
       {quizData[type].map(question => (
         <div className={`${question.type.toLowerCase()} entry`}>
           <input
