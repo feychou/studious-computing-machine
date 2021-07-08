@@ -13,7 +13,7 @@ const DATA_FETCHING = 'DATA_FETCHING';
 
 const outcomes = {
   [FULL_STACK_AUTH]: {
-    title: 'Full Stack Web App with Authorisation'
+    title: 'Full Stack Web App with Authorisation',
     desc: [
       'This type of application consists of three main parts: a backend with data persistence, a client that communicates with it through an API and an authorisation flow',
       'It is the most advanced type of application, but you may be able to tackle it!'
@@ -77,11 +77,20 @@ const outcomes = {
     title: 'Simple SPA',
     desc: [
       'This type of application is only client-side.',
-      'The advice is to keep it very simple, with minimal or no state at all',
+      'The advice is to keep it very simple, with minimal or no state at all.',
       'Leverage the design and/or the content over the functionality!'
     ],
     examples: ['Portfolio', 'Photography website', 'Text-based adventure'],
     links: [],
     remarks: [RESPONSIVE_DESIGN]
   }
+}
+
+export {
+  outcomes,
+  FULL_STACK_AUTH,
+  FULL_STACK,
+  ADVANCED_SPA,
+  MEDIUM_SPA,
+  SIMPLE_SPA
 }

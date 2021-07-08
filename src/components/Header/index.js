@@ -1,7 +1,5 @@
 import React from 'react';
 
-import { quizData } from '../../quizData';
-
 import './styles.css';
 
 function Header() {
