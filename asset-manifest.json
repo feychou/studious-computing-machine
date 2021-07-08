@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/studious-computing-machine/static/css/main.37288669.chunk.css",
+    "main.js": "/studious-computing-machine/static/js/main.39d991c4.chunk.js",
+    "main.js.map": "/studious-computing-machine/static/js/main.39d991c4.chunk.js.map",
+    "runtime-main.js": "/studious-computing-machine/static/js/runtime-main.9478153b.js",
+    "runtime-main.js.map": "/studious-computing-machine/static/js/runtime-main.9478153b.js.map",
+    "static/js/2.92bcafd0.chunk.js": "/studious-computing-machine/static/js/2.92bcafd0.chunk.js",
+    "static/js/2.92bcafd0.chunk.js.map": "/studious-computing-machine/static/js/2.92bcafd0.chunk.js.map",
+    "static/js/3.8baaeffb.chunk.js": "/studious-computing-machine/static/js/3.8baaeffb.chunk.js",
+    "static/js/3.8baaeffb.chunk.js.map": "/studious-computing-machine/static/js/3.8baaeffb.chunk.js.map",
+    "index.html": "/studious-computing-machine/index.html",
+    "static/css/main.37288669.chunk.css.map": "/studious-computing-machine/static/css/main.37288669.chunk.css.map",
+    "static/js/2.92bcafd0.chunk.js.LICENSE.txt": "/studious-computing-machine/static/js/2.92bcafd0.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9478153b.js",
+    "static/js/2.92bcafd0.chunk.js",
+    "static/css/main.37288669.chunk.css",
+    "static/js/main.39d991c4.chunk.js"
+  ]
+}
