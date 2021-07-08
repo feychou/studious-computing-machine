@@ -15,9 +15,9 @@ function QuizSection({ type, onChange }) {
             id={question.id}
             name="client-side-question"
             type="checkbox"
-            onChange={() => onChange(question.id)}
+            onChange={() => onChange(question, type)}
           />
-          <label for={question.id}>
+          <label htmlFor={question.id}>
             {question.text}
           </label>
         </div>

@@ -18,24 +18,39 @@ function App() {
   const [checked, setChecked] = useState([]);
   const [openModal, setOpenModal] = useState(false);
 
-  const onChangeChecked = (question) => {
-    const newChecked = checked.includes(question) ?
-      checked.filter(item => item !== question) :
-      [...checked, question]
+  const onChangeChecked = (question, cat) => {
+    const newChecked = checked.find(item => item.id === question.id) ?
+      checked.filter(item => item.id !== question.id) :
+      [...checked, {...question, cat}]
 
     setChecked(newChecked)
   }
 
   const toggleModal = () => {
     setOpenModal(!openModal)
-  } 
+  }
+
+  const getResult = () => {
+    const score = checked.reduce((acc, question) => {
+      const prop = question.cat;
+
+      return {
+        ...acc,
+        [prop]: acc[prop] + question.points
+      }
+
+
+    }, {[LAYOUT]: 0, [FRONTEND]: 0, [BACKEND]: 0});
+
+  }
+
 
   return (
     <div className="App">
       <div className={`Backdrop ${openModal && 'openModal'}`}>
         <Header />
         {quizSections.map(type => <QuizSection type={type} onChange={onChangeChecked} />)}
-        <button onClick={toggleModal} onKeyPress={toggleModal}>My result</button>
+        <button onClick={getResult} onKeyPress={toggleModal}>My result</button>
       </div>
       {openModal && <Modal toggle={toggleModal} />}
     </div>
