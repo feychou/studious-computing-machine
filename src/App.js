@@ -3,18 +3,9 @@ import { useState } from 'react';
 import {
   FRONTEND,
   LAYOUT,
-  BACKEND,
-  AUTH,
-  PRIVATE_ROUTES
+  BACKEND
 } from './quizData';
-import {
-  outcomes,
-  FULL_STACK_AUTH,
-  FULL_STACK,
-  ADVANCED_SPA,
-  MEDIUM_SPA,
-  SIMPLE_SPA
-} from './outcomes';
+
 import useResult from './useResult';
 import QuizSection from './components/QuizSection';
 import Header from './components/Header';
@@ -26,12 +17,7 @@ const quizSections = [ LAYOUT, FRONTEND, BACKEND ];
 
 function App() {
   const [openModal, setOpenModal] = useState(false);
-  const [
-    checked,
-    setChecked,
-    outcome,
-    setOutcome
-  ] = useResult();
+  const [ setChecked, outcome, setOutcome ] = useResult();
 
   const toggleModal = () => {
     setOpenModal(!openModal)

@@ -75,12 +75,7 @@ function useResult() {
     setOutcome(chooseOutcome(score, doTheyKnowAuth()))
   }
 
-  return [
-    checked,
-    onChangeChecked,
-    outcome,
-    getResult
-  ];
+  return [ onChangeChecked, outcome, getResult ];
 }
 
 export default useResult;
