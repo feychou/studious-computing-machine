@@ -20,7 +20,7 @@ const outcomes = {
     ],
     examples: ['Job searching platform', 'E-commerce app'],
     links: [],
-    remarks: [
+    highlights: [
       MINIMAL_CLIENT,
       MINIMAL_UI,
       RESPONSIVE_DESIGN,
@@ -35,7 +35,7 @@ const outcomes = {
     ],
     examples: ['Meme generator with storage for images'],
     links: [],
-    remarks: [
+    highlights: [
       MINIMAL_CLIENT,
       MINIMAL_UI,
       RESPONSIVE_DESIGN,
@@ -51,7 +51,7 @@ const outcomes = {
     ],
     examples: ['Pokemon battle app', 'Language learning app', 'Maps-heavy app'],
     links: [],
-    remarks: [
+    highlights: [
       MINIMAL_UI,
       PUBLIC_API,
       GAME,
@@ -66,7 +66,7 @@ const outcomes = {
     ],
     examples: ['Pokedex', 'ToDo list', 'this app'],
     links: [],
-    remarks: [
+    highlights: [
       MINIMAL_UI,
       PUBLIC_API,
       GAME,
@@ -82,7 +82,7 @@ const outcomes = {
     ],
     examples: ['Portfolio', 'Photography website', 'Text-based adventure'],
     links: [],
-    remarks: [RESPONSIVE_DESIGN]
+    highlights: [RESPONSIVE_DESIGN]
   }
 }
 
@@ -92,5 +92,11 @@ export {
   FULL_STACK,
   ADVANCED_SPA,
   MEDIUM_SPA,
-  SIMPLE_SPA
+  SIMPLE_SPA,
+  MINIMAL_UI,
+  MINIMAL_CLIENT,
+  DATA_FETCHING,
+  PUBLIC_API,
+  RESPONSIVE_DESIGN,
+  GAME
 }

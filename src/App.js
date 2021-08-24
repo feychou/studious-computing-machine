@@ -35,7 +35,7 @@ function App() {
         {quizSections.map(type => <QuizSection type={type} onChange={setChecked} />)}
         <button onClick={getResult} onKeyPress={toggleModal}>My result</button>
       </div>
-      {openModal && <Modal toggle={toggleModal} content={outcome} />}
+      {openModal && <Modal toggle={toggleModal} content={outcome.main} />}
     </div>
   );
 }
