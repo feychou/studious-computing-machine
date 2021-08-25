@@ -1,3 +1,7 @@
+import {
+  LAYOUT,
+  FRONTEND
+} from './quizData';
 const FULL_STACK_AUTH = 'FULL_STACK_AUTH';
 const FULL_STACK = 'FULL_STACK';
 const ADVANCED_SPA = 'ADVANCED_SPA';
@@ -62,7 +66,7 @@ const outcomes = {
     title: 'SPA',
     desc: [
       'This type of application is only client-side.',
-      'The advice is to keep it relatively simple: moderate level of component nesting, no global state etc.'
+      'The advice is to keep it relatively simple: moderate level of component nesting, no global state, moderate complexity on the business logic side etc.'
     ],
     examples: ['Pokedex', 'ToDo list', 'this app'],
     links: [],
@@ -86,6 +90,33 @@ const outcomes = {
   }
 }
 
+const suggestions = {
+  [MINIMAL_UI]: {
+    text: 'Try to keep your layout minimal',
+    reason: `you scored poorly in ${LAYOUT}.`
+  },
+  [MINIMAL_CLIENT]: {
+    text: 'Try to keep your client minimal, avoiding nested props or global state.',
+    reason: `you scored poorly in ${FRONTEND}.`
+  },
+  [RESPONSIVE_DESIGN]: {
+    text: 'Consider making your app responsive',
+    reason: 'you ticked the question related to responsive design.'
+  },
+  [DATA_FETCHING]: {
+    text: 'Make sure you reviews data fetching in React',
+    reason: `you did not tick the ${FRONTEND} questions related to data fetching (POST and GET).`
+  },
+  [PUBLIC_API]: {
+    text: 'Consider using a public API',
+    reason: `you ticked the ${FRONTEND} questions related to data fetching (POST and GET).`
+  },
+  [GAME]: {
+    text: 'Consider something game-like, for instance a simple puzzle game or a gamified educational app',
+    reason: 'you ticked the game logic question.'
+  }
+}
+
 export {
   outcomes,
   FULL_STACK_AUTH,
@@ -98,5 +129,6 @@ export {
   DATA_FETCHING,
   PUBLIC_API,
   RESPONSIVE_DESIGN,
-  GAME
+  GAME,
+  suggestions
 }

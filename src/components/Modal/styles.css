@@ -16,3 +16,7 @@
 .Modal .title {
   font-weight: bold;
 }
+
+.Modal .scoreTag {
+  text-decoration: underline;
+}

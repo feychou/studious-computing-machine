@@ -22,7 +22,8 @@ import {
   DATA_FETCHING,
   PUBLIC_API,
   RESPONSIVE_DESIGN as RES_DESIGN_SUGG,
-  GAME
+  GAME,
+  suggestions as allSuggestions
 } from './outcomes';
 
 const initialScore = {[LAYOUT]: 0, [FRONTEND]: 0, [BACKEND]: 0};
@@ -35,20 +36,6 @@ const initialOutcome = {
 function useResult() {
   const [checked, setChecked] = useState([])
   const [outcome, setOutcome] = useState(initialOutcome);
-
-  useEffect(() => {
-    setOutcome({
-      ...outcome,
-      main: chooseOutcome()
-    })
-  }, [outcome.score])
-
-  useEffect(() => {
-    setOutcome({
-      ...outcome,
-      suggestions: getSuggestions()
-    })
-  }, [outcome.main])
 
   const onChangeChecked = (question, cat) => {
     const newChecked = checked.find(item => item.id === question.id) ?
@@ -68,43 +55,43 @@ function useResult() {
     return fetchChecked.length === 2
   }
 
-  const getSuggestions = () => {
-    const { main, score } = outcome;
+  const getSuggestions = (main, score) => {
     const { highlights } = main
 
     const scoreLayout = score[LAYOUT];
     const scoreFrontend = score[FRONTEND];
-
+    const fetchChecked = doTheyKnowFetch();
+    console.log(checked)
     const suggestions = highlights.reduce((acc, sugg) => {
       switch(sugg) {
         case(MINIMAL_UI): 
           if (scoreLayout < 60) {
-            return [...acc, MINIMAL_UI]
+            return [...acc, allSuggestions[MINIMAL_UI]]
           }
           return acc;
         case(MINIMAL_CLIENT):
           if (scoreFrontend < 60) {
-            return [...acc, MINIMAL_CLIENT]
+            return [...acc, allSuggestions[MINIMAL_CLIENT]]
           }
           return acc;
         case(DATA_FETCHING):
-          if (!doTheyKnowFetch()) {
-            return [...acc, DATA_FETCHING]
+          if (!fetchChecked) {
+            return [...acc, allSuggestions[DATA_FETCHING]]
           }
           return acc;
         case(PUBLIC_API):
-          if (doTheyKnowFetch()) {
-            return [...acc, PUBLIC_API]
+          if (fetchChecked) {
+            return [...acc, allSuggestions[PUBLIC_API]]
           }
           return acc;
         case(RES_DESIGN_SUGG):
           if (checked.find(item => item.id === RES_DESIGN)) {
-            return [...acc, RES_DESIGN_SUGG]
+            return [...acc, allSuggestions[RES_DESIGN_SUGG]]
           }
-          return [...acc, RES_DESIGN_SUGG]
+          return acc
         case(GAME):
           if (checked.find(item => item.id === GAME_LOGIC)) {
-            return [...acc, GAME]
+            return [...acc, allSuggestions[GAME]]
           }
           return acc;
         default:
@@ -115,8 +102,7 @@ function useResult() {
     return suggestions
   }
 
-  const chooseOutcome = () => {
-    const { score } = outcome;
+  const chooseOutcome = (score) => {
     const scoreBackend = score[BACKEND];
     const scoreFrontend = score[FRONTEND];
 
@@ -153,7 +139,10 @@ function useResult() {
 
     }, initialScore);
 
-    setOutcome({...outcome, score})
+    const newOutcome = chooseOutcome(score);
+    const suggestions = getSuggestions(newOutcome, score)
+
+    setOutcome({main: newOutcome, suggestions, score})
   }
 
   return [ onChangeChecked, outcome, getResult ];
