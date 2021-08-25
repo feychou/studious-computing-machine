@@ -12,7 +12,7 @@ function Header() {
         and decide on the complexity of your graduation project.
       </p>
       <p>
-        The color of the entries matters: <span className="concept color">green</span> entries are about notions and concepts.
+        The color of the entries matters: <span className="concept color">green</span> entries are about notions and concepts,
         <span className="skill color"> pink</span> entries are about practical skills and implementation.
       </p>
       <p>
@@ -28,7 +28,7 @@ function Header() {
         If you have already implemented successfully on your own on some project or
         you can visualise a way to implement them by thinking about all the steps it would take to,
         you are probably good to go.
-        However, if realise there are too many gaps in your thought process, then it's better not to tick them off.
+        However, if you realise there are too many gaps in your thought process, then it's better not to tick them off.
       </p>
 
     </header>
