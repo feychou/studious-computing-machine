@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import {
   FRONTEND,
   LAYOUT,
@@ -14,9 +14,9 @@ import {
   outcomes,
   FULL_STACK_AUTH,
   FULL_STACK,
-  ADVANCED_SPA,
-  MEDIUM_SPA,
-  SIMPLE_SPA,
+  ADVANCED_APP,
+  INTERMEDIATE_APP,
+  SIMPLE_APP,
   MINIMAL_CLIENT,
   MINIMAL_UI,
   DATA_FETCHING,
@@ -28,7 +28,7 @@ import {
 
 const initialScore = {[LAYOUT]: 0, [FRONTEND]: 0, [BACKEND]: 0};
 const initialOutcome = {
-  main: outcomes[SIMPLE_SPA],
+  main: outcomes[SIMPLE_APP],
   suggestions: [],
   score: initialScore
 }
@@ -61,7 +61,7 @@ function useResult() {
     const scoreLayout = score[LAYOUT];
     const scoreFrontend = score[FRONTEND];
     const fetchChecked = doTheyKnowFetch();
-    console.log(checked)
+
     const suggestions = highlights.reduce((acc, sugg) => {
       switch(sugg) {
         case(MINIMAL_UI): 
@@ -117,14 +117,14 @@ function useResult() {
     }
 
     if (scoreFrontend > 70) {
-      return outcomes[ADVANCED_SPA]
+      return outcomes[ADVANCED_APP]
     }
 
     if (scoreFrontend <= 70 && score[FRONTEND] > 40) {
-      return outcomes[MEDIUM_SPA]
+      return outcomes[INTERMEDIATE_APP]
     }
 
-    return outcomes[SIMPLE_SPA]
+    return outcomes[SIMPLE_APP]
   }
 
   const getResult = () => {

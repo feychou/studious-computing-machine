@@ -9,7 +9,7 @@ import './styles.css';
 
 function Modal({ toggle, content }) {
   const { main, score, suggestions } = content;
-
+  const total = 100
   return (
     <div className="Modal">
       <h2 className="title">{main.title}</h2>
@@ -20,9 +20,9 @@ function Modal({ toggle, content }) {
       </div><br />
       <div className="totalScore">
         <b>Final score</b><br />
-        <span className="scoreTag">{LAYOUT}</span>: {score[LAYOUT]}<br />
-        <span className="scoreTag">{FRONTEND}</span>: {score[FRONTEND]}<br />
-        <span className="scoreTag">{BACKEND}</span>: {score[BACKEND]}
+        <span className="scoreTag">{LAYOUT}</span>: {score[LAYOUT]}/{total}<br />
+        <span className="scoreTag">{FRONTEND}</span>: {score[FRONTEND]}/{total}<br />
+        <span className="scoreTag">{BACKEND}</span>: {score[BACKEND]}/{total}
       </div>
       <button onClick={toggle}>Close</button>
     </div>
